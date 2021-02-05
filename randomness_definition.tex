@@ -147,7 +147,19 @@ If we summarise what has been demonstrated here, we may argue that a necessary a
 
 3. A method for computing entropy, which allows us to quantify the strength of an entropy source in statistical terms.  
 
-Regarding the second criterion, it is worth noting that even deterministic pseudo-random number generators are physical processes since digital computer programmers implicitly orchestrate a large number of electromagnetic interactions in a very precise manner. 
+Regarding the second criterion, it is worth noting that even deterministic pseudo-random number generators are physical processes since digital computer programmers implicitly orchestrate a large number of electromagnetic interactions in a very precise manner. Now, given that the Shannon entropy is additive we may note that for a sequence of states $\{a_i\}_{i=1}^n$ we have: 
+
+\begin{equation}
+H(a_1,...,a_n)= H(a_1,...,a_{n-1}) + H(a_n)
+\end{equation}
+
+and the process is uninformative if: 
+
+\begin{equation}
+\forall i,j,k \in \mathbb{N}, H(a_i,a_j) = H(a_i,a_k) 
+\end{equation}
+
+and this holds true if, modulo the hacker's epistemic uncertainty of the system's behaviour, this hacker empirically observes a uniform distribution over the state-space. As a corollary, the system's behaviour appears ergodic.  
 
 \section*{References}
 
